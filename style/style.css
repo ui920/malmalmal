@@ -11,10 +11,21 @@
   text-align: center;
 }
 
+.bb {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.bb2 {
+  font-weight: 400;
+  margin-bottom: 5.5px;
+}
+
 h2,
 h3,
 p {
   font-size: 1.2vw;
+  /* margin-bottom: 10%; */
 }
 
 h2 {
@@ -34,6 +45,7 @@ p {
   font-size: 20px;
   white-space: normal;
   word-break: break-word;
+  /* margin-bottom: 10%; */
 }
 
 summary,
@@ -348,6 +360,7 @@ nav a {
 .fade-wrapper > * {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out forwards;
+  text-align: center;
 }
 
 .fade-delay-1 {
@@ -377,14 +390,14 @@ nav a {
 .fd-2 {
   font-size: 17px;
   font-weight: 300;
-  margin-top: -0.1rem;
+  margin-top: 5px;
 }
 
 .fade-delay-3 {
   font-size: 15px;
   font-weight: 300;
   color: #ffffff;
-  margin-top: 0.8rem;
+  margin-top: 5px;
 }
 
 /* horse */
