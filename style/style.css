@@ -20,23 +20,10 @@ summary,
   text-align: center;
 }
 
-body {
-  line-height: 1.6;
-  font-family: 'Noto Sans KR', sans-serif;
-  background-color: #fff;
-  color: #000;
-}
-
 a {
   text-decoration: none;
   color: black;
   transition: color 0.2s ease;
-}
-
-h2,
-p {
-  font-size: 1.2vw;
-  text-align: left;
 }
 
 h2 {
@@ -44,45 +31,41 @@ h2 {
   margin-bottom: 2vw;
   width: auto;
   font-size: 1.2vw;
+  text-align: left;
 }
 
 p {
-  font-weight: 300;
+  line-height: 1.7;
+  font-weight: 400;
   font-size: 1vw;
   white-space: normal;
   word-break: break-word;
-  margin-bottom: 1vw;
+  text-align: left;
 }
 
 .bb {
-  font-weight: 400;
-  margin-bottom: 0.5vw;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .bb2 {
-  font-weight: 400;
-  /* margin-bottom: 5px; */
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .example-list {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .example-list li {
   list-style-type: none; /* 기존 마커 제거 */
   position: relative;
-  padding-left: 15px; /* 하이픈과 텍스트 간 간격 */
   font-size: 1vw;
-  font-weight: 300;
-  line-height: 1.6;
+  font-weight: 350;
+  line-height: 1.4;
   margin-bottom: 5px;
   text-align: left;
-}
-
-.example-list li::before {
-  content: '-';
-  position: absolute;
-  left: 0;
 }
 
 /* ============================= */
