@@ -1,3 +1,12 @@
+summary,
+.center-page {
+  cursor: help !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* ================== */
 /* Reset & Common */
 /* ================== */
@@ -11,50 +20,69 @@
   text-align: center;
 }
 
-.bb {
-  font-weight: 400;
-  margin-bottom: 5px;
-}
-
-.bb2 {
-  font-weight: 400;
-  margin-bottom: 5.5px;
-}
-
-h2,
-h3,
-p {
-  font-size: 1.2vw;
-  /* margin-bottom: 10%; */
-}
-
-h2 {
-  font-weight: 400;
-  width: 30px;
-  margin-bottom: 2.5vw;
+body {
+  line-height: 1.6;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #fff;
+  color: #000;
 }
 
 a {
   text-decoration: none;
   color: black;
+  transition: color 0.2s ease;
+}
+
+h2,
+p {
+  font-size: 1.2vw;
+  text-align: left;
+}
+
+h2 {
+  font-weight: 500;
+  margin-bottom: 2vw;
+  width: auto;
+  font-size: 1.2vw;
 }
 
 p {
-  text-align: left;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1vw;
   white-space: normal;
   word-break: break-word;
-  /* margin-bottom: 10%; */
+  margin-bottom: 1vw;
 }
 
-summary,
-.center-page {
-  cursor: help !important;
+.bb {
+  font-weight: 400;
+  margin-bottom: 0.5vw;
 }
 
-::-webkit-scrollbar {
-  display: none;
+.bb2 {
+  font-weight: 400;
+  /* margin-bottom: 5px; */
+}
+
+.example-list {
+  margin-bottom: 20px;
+}
+
+.example-list li {
+  list-style-type: none; /* 기존 마커 제거 */
+  position: relative;
+  padding-left: 15px; /* 하이픈과 텍스트 간 간격 */
+  font-size: 1vw;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.example-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
 }
 
 /* ============================= */
@@ -69,6 +97,9 @@ section {
   width: 100%;
 }
 
+.mal {
+  font-size: 1.2vw;
+}
 .intro {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -233,7 +264,8 @@ nav a {
 .back:hover,
 .info:hover,
 .s-q:hover,
-.hd1:hover {
+.hd1:hover,
+.mal:hover {
   color: blue;
 }
 
