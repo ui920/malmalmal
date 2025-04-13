@@ -187,17 +187,6 @@ section {
   }
 }
 
-.back1,
-.info {
-  display: inline-block;
-}
-
-.back1:hover,
-.info:hover {
-  animation: moveLeftRight 0.4s ease-in-out infinite;
-  color: blue;
-}
-
 nav {
   position: fixed;
   display: flex;
@@ -227,9 +216,24 @@ canvas {
   font-size: 1.3vw;
 }
 
-.back1,
-.info {
+.back1 {
   font-size: 1.4vw;
+  display: inline-block;
+}
+
+.info {
+  font-size: 2vw;
+  display: inline-block;
+  filter: grayscale(100%);
+}
+
+.info:hover {
+  filter: brightness(0.8) sepia(1) hue-rotate(190deg) saturate(300%);
+  animation: moveLeftRight 0.4s ease-in-out infinite;
+}
+
+.back1:hover {
+  animation: moveLeftRight 0.4s ease-in-out infinite;
 }
 
 nav a {
@@ -245,7 +249,6 @@ nav a {
 .sample:hover,
 .back1:hover,
 .back:hover,
-.info:hover,
 .s-q:hover,
 .hd1:hover,
 .mal:hover {
@@ -332,15 +335,4 @@ nav a {
     position: absolute;
     right: 4vw;
   }
-}
-/* horse */
-.gradient-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 50vh;
-  z-index: 0;
-  pointer-events: none;
-  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
 }
