@@ -20,6 +20,39 @@ summary,
   text-align: center;
 }
 
+.faucet-container {
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+.faucet {
+  width: 250px;
+  height: 360px;
+}
+
+.water-flow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(280%);
+  font-size: 1.25vw;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 1;
+  animation: water-flow 3.5s linear infinite;
+}
+
+@keyframes water-flow {
+  0% {
+    top: 95%; /* 텍스트가 수돗꼭지 아래에서 시작 */
+    opacity: 1;
+  }
+  100% {
+    top: 350%; /* 텍스트가 화면 아래로 완전히 내려감 */
+    opacity: 0; /* 텍스트가 사라지면서 계속 흐르는 효과 */
+  }
+}
 .si {
   width: 20px;
   height: 20px;
