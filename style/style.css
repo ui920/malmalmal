@@ -34,8 +34,8 @@ summary,
 .water-flow {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(280%);
+  left: 75%;
+  transform: translateX(-10%);
   font-size: 1.25vw;
   font-weight: 400;
   white-space: nowrap;
@@ -46,12 +46,12 @@ summary,
 
 @keyframes water-flow {
   0% {
-    top: 95%; /* 텍스트가 수돗꼭지 아래에서 시작 */
+    top: 95%;
     opacity: 1;
   }
   100% {
-    top: 350%; /* 텍스트가 화면 아래로 완전히 내려감 */
-    opacity: 0; /* 텍스트가 사라지면서 계속 흐르는 효과 */
+    top: 350%;
+    opacity: 0;
   }
 }
 .si {

@@ -178,14 +178,17 @@
         }
       }
     </script>
+    
     <script>
-      const faucet = document.querySelector('.faucet-container'); // 또는 정확한 대상
+      const faucet = document.querySelector('.faucet-container');
     
       for (let i = 0; i < 10; i++) {
         const drop = document.createElement('div');
         drop.className = 'water-flow';
         drop.innerText = '말';
-        drop.style.animationDelay = `${-Math.random() * 3.5}s`; // 여기가 핵심!
+        const randomFontSize = (Math.random() * 1 + 0.8).toFixed(1);
+        drop.style.fontSize = `${randomFontSize}vw`;
+        drop.style.animationDelay = `${-Math.random() * 4}s`;
         faucet.appendChild(drop);
       }
     </script>
