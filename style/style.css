@@ -50,10 +50,30 @@ summary,
     opacity: 1;
   }
   100% {
-    top: 350%;
+    top: 300%;
     opacity: 0;
   }
 }
+.cv_m,
+.ho_m,
+.kc_m {
+  margin-top: 10px;
+  display: block;
+  overflow: hidden;
+}
+.cv {
+  max-width: 100%;
+  height: 245px;
+}
+.ho {
+  max-width: 100%;
+  height: auto;
+}
+.kc {
+  max-width: 100%;
+  height: 245px;
+}
+
 .si {
   width: 20px;
   height: 20px;
@@ -93,6 +113,7 @@ p {
 
 .bb2 {
   font-weight: 500;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
@@ -297,7 +318,7 @@ canvas {
 }
 
 .info:hover {
-  filter: brightness(0.8) sepia(1) hue-rotate(190deg) saturate(300%);
+  filter: brightness(0.6) sepia(1) hue-rotate(190deg) saturate(300%);
   animation: moveLeftRight 0.4s ease-in-out infinite;
 }
 
