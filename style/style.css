@@ -40,7 +40,8 @@ summary,
   font-weight: 400;
   white-space: nowrap;
   opacity: 1;
-  animation: water-flow 3.5s linear infinite;
+  animation: water-flow 4s linear infinite;
+  animation-fill-mode: both;
 }
 
 @keyframes water-flow {
@@ -281,6 +282,7 @@ canvas {
 
 .hd1 {
   font-size: 1.3vw;
+  font-weight: 500;
 }
 
 .back1 {
@@ -304,12 +306,12 @@ canvas {
 }
 
 .s-q {
-  font-weight: 800;
+  font-weight: 600;
   margin-left: 3px;
 }
 
 nav a {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.6vw;
   text-decoration: none;
   color: black;

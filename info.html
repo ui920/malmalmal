@@ -38,10 +38,9 @@
     <section class="intro">
       <article class="contents">
         <h2>말 요소</h2>
-        <div class="faucet-container">
+        <div class="faucet-container" id="faucet"> <!-- ← id 추가 -->
           <img class="faucet" src="image/water.png" alt="수돗꼭지">
-          <div class="water-flow">말</div> <!-- 텍스트가 흐르는 부분 -->
-        </div>
+        </div>   
       </article>      
       <article class="contents">
         <h2>
@@ -177,6 +176,17 @@
           audio.currentTime = 0;
           audio.play();
         }
+      }
+    </script>
+    <script>
+      const faucet = document.querySelector('.faucet-container'); // 또는 정확한 대상
+    
+      for (let i = 0; i < 10; i++) {
+        const drop = document.createElement('div');
+        drop.className = 'water-flow';
+        drop.innerText = '말';
+        drop.style.animationDelay = `${-Math.random() * 3.5}s`; // 여기가 핵심!
+        faucet.appendChild(drop);
       }
     </script>
   </body>
