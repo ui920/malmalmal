@@ -40,7 +40,7 @@ summary,
   font-weight: 400;
   white-space: nowrap;
   opacity: 1;
-  animation: water-flow 4s linear infinite;
+  animation: water-flow 3s linear infinite;
   animation-fill-mode: both;
 }
 
@@ -62,14 +62,17 @@ summary,
   overflow: hidden;
 }
 .cv {
+  /* filter: grayscale(100%); */
   max-width: 100%;
   height: 245px;
 }
 .ho {
+  /* filter: grayscale(100%); */
   max-width: 100%;
   height: 245px;
 }
 .kc {
+  /* filter: grayscale(100%); */
   max-width: 100%;
   height: 245px;
 }
@@ -84,11 +87,12 @@ summary,
 
 .audio {
   width: 100%;
-  height: 25px;
+  height: 15px;
   margin: 1em auto;
   margin-bottom: 30px;
   display: block;
   transform-origin: center;
+  background-color: #f0f0f0; /* 회색 배경 바꾸기 */
 }
 
 a {
