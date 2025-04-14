@@ -67,7 +67,7 @@ summary,
 }
 .ho {
   max-width: 100%;
-  height: auto;
+  height: 245px;
 }
 .kc {
   max-width: 100%;
@@ -92,14 +92,14 @@ h2 {
   font-weight: 500;
   margin-bottom: 2vw;
   width: auto;
-  font-size: 1.2vw;
+  font-size: 22px;
   text-align: left;
 }
 
 p {
   line-height: 1.7;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: 20px;
   white-space: normal;
   word-break: break-word;
   text-align: left;
@@ -118,23 +118,24 @@ p {
 }
 
 .exx {
-  font-size: 0.9vw;
-  font-style: italic;
+  font-size: 17px;
   color: rgb(80, 80, 80);
 }
 
-.example-list {
-  margin-bottom: 10px;
+.example-list li {
+  position: relative;
+  font-size: 20px;
+  font-weight: 350;
+  line-height: 1.8;
+  text-align: left;
+  list-style: none;
+  padding-left: 14px;
 }
 
-.example-list li {
-  list-style-type: none; /* 기존 마커 제거 */
-  position: relative;
-  font-size: 1vw;
-  font-weight: 350;
-  line-height: 1.4;
-  margin-bottom: 5px;
-  text-align: left;
+.example-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
 }
 
 /* ============================= */
@@ -159,7 +160,7 @@ section.intro {
 .intro {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* gap: 5vw; */
+  gap: 2vw;
   padding: 4vw;
   justify-content: center;
   padding-inline: 15px;
