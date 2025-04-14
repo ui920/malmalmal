@@ -62,17 +62,17 @@ summary,
   overflow: hidden;
 }
 .cv {
-  /* filter: grayscale(100%); */
+  filter: grayscale(100%);
   max-width: 100%;
   height: 245px;
 }
 .ho {
-  /* filter: grayscale(100%); */
+  filter: grayscale(100%);
   max-width: 100%;
   height: 245px;
 }
 .kc {
-  /* filter: grayscale(100%); */
+  filter: grayscale(100%);
   max-width: 100%;
   height: 245px;
 }
