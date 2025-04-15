@@ -61,20 +61,19 @@ summary,
   display: block;
   overflow: hidden;
 }
-.cv {
-  filter: grayscale(100%);
-  max-width: 100%;
-  height: 245px;
-}
-.ho {
-  filter: grayscale(100%);
-  max-width: 100%;
-  height: 245px;
-}
+
+.cv,
+.ho,
 .kc {
   filter: grayscale(100%);
   max-width: 100%;
   height: 245px;
+}
+
+.cv:hover,
+.ho:hover,
+.kc:hover {
+  filter: grayscale(0%);
 }
 
 .si {

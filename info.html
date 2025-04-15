@@ -60,11 +60,12 @@
      <audio id="A" src="mp3/1.mp3"></audio>
         </p> 
         <p class="cv_m">
-          <img class="cv" src="image/cv2.jpg" alt="귓속말">
-          </p>
-          <audio class="audio" controls>
-            <source src="mp3/CVS.mp3" type="audio/mpeg">
-          </audio>
+          <img class="cv"
+               src="image/cv2.jpg"
+               alt="귓속말"
+               data-audio="mp3/CVS.mp3"
+               onclick="playSound(this)" />
+        </p>        
         <p class="bb2">[명사] ¹</p>
         <p>
           사람의 생각이나 느낌 따위를 표현하고 전달하는 데 쓰는 음성 기호. 곧
@@ -95,11 +96,12 @@
      <audio id="B" src="mp3/3.mp3"></audio>
         </p>
         <p class="ho_m">
-          <img class="ho" src="image/ho1.jpg" alt="말달리자">
-          </p>
-          <audio class="audio" controls>
-            <source src="mp3/ho1.mp3" type="audio/mpeg">
-          </audio>
+          <img class="ho"
+               src="image/ho1.jpg"
+               alt="말달리자"
+               data-audio="mp3/ho1.mp3"
+               onclick="playSound(this)" />
+        </p>        
         <p class="bb2">[명사] ¹ ◌ 동물</p>
         <p>
           말과의 포유류. 어깨의 높이는 1.2~1.7미터이며, 갈색·검은색·붉은
@@ -129,11 +131,12 @@
           <audio id="B" src="mp3/3.mp3"></audio>
         </p>
         <p class="kc_m">
-          <img class="kc" src="image/KC.jpg" alt="장기말">
-          </p>
-          <audio class="audio" controls>
-            <source src="mp3/KCS.mp3" type="audio/mpeg">
-          </audio>
+          <img class="kc"
+               src="image/KC.jpg"
+               alt="장기말"
+               data-audio="mp3/KCS.mp3"
+               onclick="playSound(this)" />
+        </p>        
         <p class="bb2">[명사] ¹ ◌ 민속</p>
         <p>
           고누나 윷놀이 따위를 할 때 말판에서 정해진 규칙에 따라 옮기는 패.<p class="exx">≒ 알</p>
@@ -179,16 +182,19 @@
         </ul>
       </article>
     </section>
+    <audio id="audioPlayer"></audio>
     <script>
-      function playAudio(id) {
-        const audio = document.getElementById(id);
-        if (audio) {
+      function playSound(img) {
+        const audioSrc = img.getAttribute('data-audio');
+        const audio = document.getElementById('audioPlayer');
+        if (audioSrc) {
+          audio.pause();
           audio.currentTime = 0;
+          audio.src = audioSrc;
           audio.play();
         }
       }
     </script>
-    
     <script>
       const faucet = document.querySelector('.faucet-container');
     
