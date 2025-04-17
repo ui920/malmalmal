@@ -8,6 +8,7 @@
     <meta name="description" content="말을 소개합니다." />
     <meta name="keywords" content="말, 웹사이트, Talk, website" />
     <link rel="stylesheet" href="style/style.css" />
+    <script src="js/info.js"></script>
     <link
       rel="icon"
       type="image/png"
@@ -215,9 +216,7 @@
         </ul>
       </article>
     </section>
-
     <audio id="audioPlayer"></audio>
-
     <script>
       function playSound(img) {
         const audioSrc = img.getAttribute('data-audio');
@@ -231,6 +230,7 @@
       }
 
       const faucet = document.querySelector('.faucet-container');
+
       for (let i = 0; i < 5; i++) {
         const drop = document.createElement('div');
         drop.className = 'water-flow';
@@ -240,6 +240,19 @@
         drop.style.animationDelay = `${-Math.random() * 4}s`;
         faucet.appendChild(drop);
       }
+
+      // ✨ 수돗꼭지 클릭 이벤트 추가
+      faucet.addEventListener('click', () => {
+        alert('끼이익 말을 잠시 멈추겠습니다.');
+
+        const flows = document.querySelectorAll('.water-flow');
+        flows.forEach((el) => (el.style.animationPlayState = 'paused'));
+
+        setTimeout(() => {
+          alert('끼이익 말을 다시 틀겠습니다.');
+          flows.forEach((el) => (el.style.animationPlayState = 'running'));
+        }, 3000); // 10초 (10000ms)
+      });
     </script>
   </body>
 </html>

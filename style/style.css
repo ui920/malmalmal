@@ -41,6 +41,7 @@ summary,
   white-space: nowrap;
   opacity: 1;
   animation: water-flow 3s linear infinite;
+  animation-play-state: running; /* 이 줄 중요해요! */
   animation-fill-mode: both;
 }
 
@@ -314,15 +315,15 @@ nav {
   z-index: 10;
   padding-inline: 30px;
   background-color: rgba(255, 255, 255);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
   mask-image: linear-gradient(
     to bottom,
-    rgb(255, 255, 255) 60%,
+    rgb(255, 255, 255) 70%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
-    rgb(255, 255, 255) 60%,
+    rgb(255, 255, 255) 80%,
     transparent 100%
   );
 }
@@ -355,7 +356,7 @@ canvas {
 }
 
 .info:hover {
-  filter: brightness(0.6) sepia(1) hue-rotate(190deg) saturate(300%);
+  filter: brightness(0.55) sepia(2) hue-rotate(190deg) saturate(300%);
   animation: moveLeftRight 0.4s ease-in-out infinite;
 }
 
