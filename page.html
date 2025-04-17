@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>말.스프레드시트</title>
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style2.css" />
+    <script src="./js/main.js" defer></script>
     <link
       rel="icon"
       type="image/png"
@@ -18,53 +20,6 @@
       href="favicon/L96x96.png"
       media="(prefers-color-scheme: dark)"
     />
-    <style>
-      body {
-        margin: 0;
-        overflow-x: hidden;
-      }
-
-      #iframes {
-        width: 100%;
-        height: 94vh;
-        margin-top: 75px;
-        overflow-x: hidden;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        pointer-events: none;
-      }
-
-      #iframes-inner {
-        display: flex;
-        width: max-content;
-        height: 100%;
-      }
-
-      .iframe-body1 {
-        scroll-snap-align: start;
-        flex: 0 0 60vw;
-        height: 100%;
-      }
-
-      .iframe-body2 {
-        scroll-snap-align: start;
-        flex: 0 0 100vw;
-        height: 100%;
-      }
-
-      .iframe-body3 {
-        scroll-snap-align: start;
-        flex: 0 0 100vw;
-        height: 100%;
-      }
-
-      iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        pointer-events: auto;
-      }
-    </style>
   </head>
 
   <body>
@@ -105,46 +60,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      // 페이지 로드 시 iframe-body1으로 스크롤 이동
-      window.addEventListener('load', function () {
-        const container = document.getElementById('iframes');
-        const firstFrame = document.querySelector('.iframe-body1');
-
-        // 초기 스크롤 위치를 iframe-body1로 설정
-        container.scrollTo({
-          left: firstFrame.offsetLeft,
-          behavior: 'auto', // 즉시 이동
-        });
-      });
-
-      document.querySelectorAll('.rist, .obs, .sample').forEach((link) => {
-        link.addEventListener('click', function () {
-          document
-            .querySelectorAll('nav a')
-            .forEach((el) => el.classList.remove('active'));
-          this.classList.add('active');
-
-          const index = parseInt(this.dataset.target);
-          const frames = document.querySelectorAll('#iframes-inner > div');
-          const targetFrame = frames[index];
-          const container = document.getElementById('iframes');
-
-          // pointer-events 활성화 (스크롤 가능)
-          container.style.pointerEvents = 'auto';
-
-          container.scrollTo({
-            left: targetFrame.offsetLeft,
-            behavior: 'smooth',
-          });
-
-          // 스크롤 완료 후 다시 pointer-events 비활성화
-          setTimeout(() => {
-            container.style.pointerEvents = 'none';
-          }, 800); // 애니메이션 시간에 맞춰 설정
-        });
-      });
-    </script>
   </body>
 </html>
