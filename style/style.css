@@ -41,7 +41,7 @@ summary,
   white-space: nowrap;
   opacity: 1;
   animation: water-flow 3s linear infinite;
-  animation-play-state: running; /* 이 줄 중요해요! */
+  animation-play-state: running;
   animation-fill-mode: both;
 }
 
@@ -202,8 +202,7 @@ section.intro {
 
 .intro_2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* gap: 2vw; */
+  grid-template-columns: repeat(3, 1fr);
   padding: 4vw;
   justify-content: center;
   padding-inline: 15px;
@@ -218,7 +217,7 @@ section.intro {
   width: fit-content;
   width: 100%;
   word-wrap: break-word;
-  margin-top: 50px;
+  margin-top: 25px;
   vertical-align: top;
   padding-right: 1vw;
 }

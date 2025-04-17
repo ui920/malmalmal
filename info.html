@@ -240,18 +240,20 @@
         drop.style.animationDelay = `${-Math.random() * 4}s`;
         faucet.appendChild(drop);
       }
-
-      // ✨ 수돗꼭지 클릭 이벤트 추가
       faucet.addEventListener('click', () => {
-        alert('끼이익 말을 잠시 멈추겠습니다.');
+        alert(
+          '끼이익 말을 2초동안 잠시 멈추겠습니다.\nScreeeech— we’ll pause the talk for 2 seconds.'
+        );
 
         const flows = document.querySelectorAll('.water-flow');
         flows.forEach((el) => (el.style.animationPlayState = 'paused'));
 
         setTimeout(() => {
-          alert('끼이익 말을 다시 틀겠습니다.');
+          alert(
+            '끼이익 말을 다시 틀겠습니다!\nScreeeech— and... the talk is back on!'
+          );
           flows.forEach((el) => (el.style.animationPlayState = 'running'));
-        }, 3000); // 10초 (10000ms)
+        }, 2000);
       });
     </script>
   </body>
