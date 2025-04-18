@@ -1,0 +1,12 @@
+.mal-def {
+  font-size: 1.2rem;
+  transition: opacity 0.4s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
