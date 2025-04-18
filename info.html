@@ -183,7 +183,10 @@
       </article>
 
       <article class="contents">
-        <h2><a class="mal" href="mu.html">말...?</a></h2>
+        <h2 class="mal-title">말...?</h2>
+        <div class="note-popup" id="notePopup">
+          💬 ‘말’은 이렇게도, 저렇게도 쓰여요!
+        </div>
         <br />
         <ul class="example-list">
           <li>고운 말과 바른 말.</li>
@@ -254,6 +257,27 @@
           );
           flows.forEach((el) => (el.style.animationPlayState = 'running'));
         }, 2000);
+      });
+    </script>
+    <script>
+      const malTitle = document.querySelector('.mal-title');
+      const notePopup = document.getElementById('notePopup');
+
+      malTitle.addEventListener('mouseover', function (e) {
+        const rect = malTitle.getBoundingClientRect();
+        const x = rect.right + window.scrollX;
+        const y = rect.top + window.scrollY;
+
+        notePopup.style.left = `${x + 10}px`;
+        notePopup.style.top = `${y}px`;
+
+        notePopup.style.opacity = 1;
+        notePopup.style.visibility = 'visible';
+      });
+
+      malTitle.addEventListener('mouseout', function () {
+        notePopup.style.opacity = 0;
+        notePopup.style.visibility = 'hidden';
       });
     </script>
   </body>
