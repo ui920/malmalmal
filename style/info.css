@@ -1,12 +1,13 @@
-.mal-def {
-  font-size: 1.2rem;
-  transition: opacity 0.4s ease;
-}
-
-.fade-out {
+.image-container {
+  position: absolute;
+  pointer-events: none;
+  z-index: 999;
   opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
 }
 
-.fade-in {
-  opacity: 1;
+.hover-image {
+  width: 100px;
+  height: auto;
 }
