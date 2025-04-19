@@ -53,4 +53,5 @@ iframe {
   height: 100%;
   border: none;
   pointer-events: auto;
+  filter: grayscale(100%);
 }
