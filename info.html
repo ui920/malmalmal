@@ -8,6 +8,7 @@
     <meta name="description" content="말을 소개합니다." />
     <meta name="keywords" content="말, 웹사이트, Talk, website" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/info.css" />
     <script src="js/info.js"></script>
     <link
       rel="icon"
@@ -183,11 +184,14 @@
       </article>
 
       <article class="contents">
-        <h2 class="mal-title">말...?</h2>
-        <div class="note-popup" id="notePopup">
-          💬 ‘말’은 이렇게도, 저렇게도 쓰여요!
-        </div>
-        <br />
+        <h2 class="mal-title">
+          <a
+            class="mal"
+            href="https://stdict.korean.go.kr/search/searchView.do?pageSize=10&searchKeyword=%EB%A7%90#top"
+            >말...?</a
+          >
+        </h2>
+        <p class="bb3">[ 이럴 때 쓰는 ‘말’이에요. ]</p>
         <ul class="example-list">
           <li>고운 말과 바른 말.</li>
           <li>오늘도 아침부터 말이 많았다.</li>
@@ -263,14 +267,12 @@
       const malTitle = document.querySelector('.mal-title');
       const notePopup = document.getElementById('notePopup');
 
-      malTitle.addEventListener('mouseover', function (e) {
-        const rect = malTitle.getBoundingClientRect();
-        const x = rect.right + window.scrollX;
-        const y = rect.top + window.scrollY;
+      malTitle.addEventListener('mouseover', function () {
+        // 위치 조정
+        notePopup.style.left = '20px'; // 원하는 위치로 조절
+        notePopup.style.top = '70px'; // 원하는 위치로 조절
 
-        notePopup.style.left = `${x + 10}px`;
-        notePopup.style.top = `${y}px`;
-
+        // 스타일 적용
         notePopup.style.opacity = 1;
         notePopup.style.visibility = 'visible';
       });
