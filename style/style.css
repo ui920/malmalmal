@@ -138,24 +138,24 @@ p {
 }
 
 .exx {
-  margin-top: -5px;
+  margin-top: -8px;
   font-size: 17px;
   color: rgb(80, 80, 80);
 }
 
-.example-list li {
+li {
   position: relative;
   margin-top: 0;
   font-size: 20px;
   font-weight: 350;
-  line-height: 1.8;
+  line-height: 1.7;
   text-align: left;
   list-style: none;
-  padding-left: 14px;
+  padding-left: 15px;
 }
 
 .example-list li::before {
-  content: '-';
+  content: '▫︎';
   position: absolute;
   left: 0;
 }
