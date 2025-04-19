@@ -42,3 +42,12 @@ document.onreadystatechange = function () {
     document.getElementById('iframes').style.opacity = '1';
   }
 };
+
+const frames = document.querySelectorAll(
+  '#iframes-inner > .iframe-body1, .iframe-body2, .iframe-body3, .iframe-body4'
+);
+let offset = 0;
+for (let i = 0; i < index; i++) {
+  offset += frames[i].offsetWidth;
+}
+container.scrollTo({ left: offset, behavior: 'smooth' });
