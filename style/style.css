@@ -212,20 +212,13 @@ section.intro {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
+  height: 105vh;
+  width: 96vw;
   overflow: hidden;
 }
 
 .welcome {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  font-size: 18vw;
-  line-height: 1;
-  letter-spacing: 1vw; /* 원하는 만큼 조절 */
+  font-size: 27vw;
   font-weight: 700;
   white-space: nowrap;
   text-align: center;
@@ -234,7 +227,7 @@ section.intro {
 
 .welcome:hover {
   color: blue;
-  font-size: calc(18vw + 4vw);
+  font-size: calc(27vw + 6vw);
 }
 
 /* Nav */
