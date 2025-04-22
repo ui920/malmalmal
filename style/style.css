@@ -7,6 +7,11 @@ summary,
   display: none;
 }
 
+body {
+  touch-action: pan-y; /* 수직 스크롤만 허용, 좌우 스와이프는 막음 */
+  overscroll-behavior-x: none; /* 가로 방향의 바운스, 뒤로가기 방지 */
+}
+
 /* ================== */
 /* Reset & Common */
 /* ================== */
