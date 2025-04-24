@@ -332,10 +332,11 @@ canvas {
 }
 
 .info {
-  width: 32px;
+  width: 5vw; /* nav 텍스트 폰트 크기와 비슷한 느낌 */
   height: auto;
   display: inline-block;
   filter: grayscale(100%);
+  transition: all 0.3s ease;
   cursor: pointer;
   margin-left: 10px;
 }
@@ -344,7 +345,6 @@ canvas {
   filter: brightness(0.55) sepia(2) hue-rotate(190deg) saturate(300%);
   animation: moveLeftRight 0.4s ease-in-out infinite;
 }
-
 .back1:hover {
   animation: moveLeftRight 0.4s ease-in-out infinite;
 }
