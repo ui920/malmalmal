@@ -2,15 +2,13 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>말말말</title>
     <meta name="description" content="말을 소개합니다." />
     <meta name="keywords" content="말, 웹사이트, Talk, website" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/info.css" />
+    <link rel="stylesheet" href="style/info_m.css" />
     <script src="js/info.js"></script>
     <script src="js/s.js"></script>
 
@@ -27,6 +25,7 @@
       media="(prefers-color-scheme: dark)"
     />
   </head>
+
   <body>
     <nav>
       <div class="nav-left">
@@ -69,7 +68,7 @@
           </a>
         </h2>
         <p class="bb">
-          말-하다 / [ 말ː]
+          [ 말ː]
           <img
             class="si"
             src="image/sou.png"
@@ -193,7 +192,7 @@
             class="mal"
             href="https://ko.wiktionary.org/wiki/%EB%A7%90"
             target="_blank"
-            >이럴 때 쓰는 ‘말’이에요.</a
+            >이럴 때 쓰는 ‘말’</a
           >
         </h2>
         <ul class="example-list">
@@ -265,25 +264,6 @@
           );
           flows.forEach((el) => (el.style.animationPlayState = 'running'));
         }, 2000);
-      });
-    </script>
-    <script>
-      const malTitle = document.querySelector('.mal-title');
-      const notePopup = document.getElementById('notePopup');
-
-      malTitle.addEventListener('mouseover', function () {
-        // 위치 조정
-        notePopup.style.left = '20px'; // 원하는 위치로 조절
-        notePopup.style.top = '70px'; // 원하는 위치로 조절
-
-        // 스타일 적용
-        notePopup.style.opacity = 1;
-        notePopup.style.visibility = 'visible';
-      });
-
-      malTitle.addEventListener('mouseout', function () {
-        notePopup.style.opacity = 0;
-        notePopup.style.visibility = 'hidden';
       });
     </script>
   </body>

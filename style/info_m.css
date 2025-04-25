@@ -1,0 +1,99 @@
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: row; /* 세로가 아니라 가로 유지 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: space-between; /* 왼쪽-오른쪽 양끝 정렬 */
+    padding: 15px;
+  }
+
+  .nav-left,
+  .nav-right {
+    width: auto;
+  }
+
+  .nav-left {
+    margin-left: -2px;
+  }
+
+  .nav-right {
+    margin-right: 5px;
+  }
+
+  .hd1,
+  .wavy-text,
+  .back1 {
+    font-size: 3.2vw;
+  }
+
+  .mal {
+    font-size: 3vw;
+    word-break: break-word;
+  }
+
+  .si {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    transform: translateY(2px);
+    margin-left: 6px;
+  }
+
+  .intro {
+    padding: 10px;
+    line-height: 1.6em;
+  }
+
+  .contents {
+    margin-top: 0%;
+    padding: 10px 0;
+  }
+
+  .bb,
+  .bb2 {
+    font-size: 3vw;
+  }
+
+  p,
+  li {
+    font-size: 3vw;
+    line-height: 1.6em;
+  }
+
+  .example-list {
+    margin-top: 30px;
+    margin-bottom: 0.5em;
+  }
+
+  .exx {
+    font-size: 2.5vw;
+  }
+
+  .cv {
+    width: 40vw;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ho,
+  .kc {
+    margin-top: 20px;
+    width: 40vw;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .faucet-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .faucet {
+    width: 30vw;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .water-flow {
+    font-size: 3vw !important; /* 물방울 텍스트 */
+  }
+}

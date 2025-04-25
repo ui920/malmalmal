@@ -1,0 +1,51 @@
+/* Reset 기본 스타일 제거 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: keep-all;
+  cursor: help !important;
+}
+
+/* 전체 화면에 꽉 차게 */
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: 'Pretendard', sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.cct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 96vw;
+  overflow: hidden;
+}
+
+.welcome {
+  font-size: 27vw;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.welcome:hover {
+  color: blue;
+  font-size: calc(27vw + 6vw);
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+  .main-text {
+    line-height: 1.4;
+  }
+}

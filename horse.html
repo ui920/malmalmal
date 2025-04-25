@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>다↗그↘닥↗</title>
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/horse_m.css" />
     <script src="js/s.js"></script>
     <link
       rel="icon"
@@ -19,62 +18,6 @@
       href="favicon/L96x96.png"
       media="(prefers-color-scheme: dark)"
     />
-    <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden;
-      }
-
-      #video-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        pointer-events: none;
-      }
-
-      /* 화이트 그라데이션 오버레이 */
-      .gradient-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        background: linear-gradient(
-          to bottom,
-          rgba(255, 255, 255, 100),
-          rgba(255, 255, 255, 0)
-        );
-        z-index: 0; /* 동영상 위에 표시되도록 설정 */
-        pointer-events: none; /* 클릭 불가능하게 설정 */
-      }
-
-      nav {
-        position: relative;
-        z-index: 2;
-      }
-
-      .gallop-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 1;
-      }
-
-      .gallop-text {
-        font-size: 28px;
-        font-weight: bold;
-        color: rgb(255, 255, 255); /* 텍스트 색상 설정 */
-        letter-spacing: 1px;
-      }
-    </style>
   </head>
   <body>
     <!-- 유튜브 배경 영상 -->

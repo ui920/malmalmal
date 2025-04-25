@@ -1,20 +1,6 @@
-summary,
-.center-page {
-  cursor: help !important;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  touch-action: pan-y; /* 수직 스크롤만 허용, 좌우 스와이프는 막음 */
-  overscroll-behavior-x: none; /* 가로 방향의 바운스, 뒤로가기 방지 */
-}
-
-/* ================== */
-/* Reset & Common */
-/* ================== */
+/* ===========================
+공통 및 리셋 스타일
+=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +11,149 @@ body {
   text-align: center;
 }
 
+body {
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y; /* 수직 스크롤만 허용 */
+  overscroll-behavior-x: none; /* 가로 바운스/뒤로가기 방지 */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===========================
+커서 스타일
+=========================== */
+summary,
+.center-page {
+  cursor: help !important;
+}
+
+/* ===========================
+링크 스타일
+=========================== */
+a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+.index:hover,
+.rist:hover,
+.obs:hover,
+.sample:hover,
+.back1:hover,
+.back:hover,
+.s-q:hover,
+.hd1:hover,
+.mal:hover {
+  color: blue;
+}
+
+/* ===========================
+텍스트 및 타이틀
+=========================== */
+h2 {
+  font-weight: 500;
+  margin-bottom: 2vw;
+  font-size: 22px;
+  text-align: left;
+}
+
+p {
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: 20px;
+  white-space: normal;
+  word-break: break-word;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.bb,
+.bb2,
+.bb3 {
+  font-weight: 500;
+}
+
+.bb {
+  margin: 30px 0 10px 0;
+}
+
+.bb2 {
+  margin: 16px 0 5px 0;
+}
+
+.bb3 {
+  margin: 16px 0 0 0;
+}
+
+.exx {
+  margin-top: -8px;
+  font-size: 17px;
+  color: rgb(80, 80, 80);
+}
+
+li {
+  position: relative;
+  font-size: 20px;
+  font-weight: 350;
+  line-height: 1.7;
+  text-align: left;
+  list-style: none;
+  padding-left: 15px;
+}
+
+.example-list li::before {
+  content: '▫︎';
+  position: absolute;
+  left: 0;
+}
+
+/* ===========================
+섹션 및 컨테이너
+=========================== */
+section {
+  width: 100%;
+}
+
+section.intro {
+  padding-top: 60px; /* nav 높이 + 여유 */
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2vw;
+  justify-content: center;
+  padding-inline: 10px;
+}
+
+.contents {
+  position: relative;
+  padding: 1vw 1vw 1vw 1vw;
+  border-radius: 10px;
+  font-size: 1.25vw;
+  line-height: 1.4;
+  width: 100%;
+  word-wrap: break-word;
+  margin-top: 60px;
+  vertical-align: top;
+}
+
+.mal {
+  font-size: 1.2vw;
+}
+
+.clickable-title:hover {
+  color: blue;
+}
+
+/* ===========================
+Faucet 관련 스타일
+=========================== */
 .faucet-container {
   position: relative;
   display: inline-block;
@@ -45,9 +174,7 @@ body {
   font-weight: 400;
   white-space: nowrap;
   opacity: 1;
-  animation: water-flow 3s linear infinite;
-  animation-play-state: running;
-  animation-fill-mode: both;
+  animation: water-flow 3s linear infinite both;
 }
 
 @keyframes water-flow {
@@ -60,6 +187,10 @@ body {
     opacity: 0;
   }
 }
+
+/* ===========================
+이미지 및 오디오
+=========================== */
 .cv_m,
 .ho_m,
 .kc_m {
@@ -93,150 +224,86 @@ body {
 .audio {
   width: 100%;
   height: 15px;
-  margin: 1em auto;
-  margin-bottom: 30px;
+  margin: 1em auto 30px auto;
   display: block;
   transform-origin: center;
-  background-color: #f0f0f0; /* 회색 배경 바꾸기 */
+  background-color: #f0f0f0;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  transition: color 0.2s ease;
-}
-
-h2 {
-  font-weight: 500;
-  margin-bottom: 2vw;
-  width: auto;
-  font-size: 22px;
-  text-align: left;
-}
-
-p {
-  line-height: 1.7;
-  font-weight: 400;
-  font-size: 20px;
-  white-space: normal;
-  word-break: break-word;
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.bb {
-  font-weight: 500;
-  margin-bottom: 10px;
-  margin-top: 30px;
-}
-
-.bb2 {
-  font-weight: 500;
-  margin-top: 16px;
-  margin-bottom: 5px;
-}
-
-.bb3 {
-  font-weight: 500;
-  margin-top: 16px;
-  margin-bottom: 0;
-}
-
-.exx {
-  margin-top: -8px;
-  font-size: 17px;
-  color: rgb(80, 80, 80);
-}
-
-li {
-  position: relative;
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: 350;
-  line-height: 1.7;
-  text-align: left;
-  list-style: none;
-  padding-left: 15px;
-}
-
-.example-list li::before {
-  content: '▫︎';
-  position: absolute;
-  left: 0;
-}
-
-/* ============================= */
-/* 기본 (Sections & Containers) */
-/* ============================= */
-body {
-  width: 100%;
-  height: 100%;
-}
-
-section {
-  width: 100%;
-}
-
-section.intro {
-  padding-top: 60px; /* nav 높이 + 여유 */
-}
-
-.mal {
-  font-size: 1.2vw;
-}
-.intro {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2vw;
-  justify-content: center;
-  padding-inline: 10px;
-}
-
-.contents {
-  position: relative;
-  padding: 1vw;
-  border-radius: 10px;
-  font-size: 1.25vw;
-  line-height: 1.4;
-  display: block;
-  width: fit-content;
-  width: 100%;
-  word-wrap: break-word;
-  margin-top: 60px;
-  vertical-align: top;
-  padding-right: 1vw;
-}
-
-.clickable-title:hover {
-  color: blue;
-}
-
-/* index */
-
-.cct {
+/* ===========================
+네비게이션 바
+=========================== */
+nav {
+  position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 105vh;
-  width: 96vw;
-  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  padding-top: 10px;
+  z-index: 10;
+  padding-inline: 21px;
+  background-color: rgba(255, 255, 255);
+  backdrop-filter: blur(8px);
+  mask-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 70%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 80%,
+    transparent 100%
+  );
 }
 
-.welcome {
-  font-size: 27vw;
-  font-weight: 700;
-  white-space: nowrap;
-  text-align: center;
-  transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+.nav-right {
+  margin-left: auto;
 }
 
-.welcome:hover {
-  color: blue;
-  font-size: calc(27vw + 6vw);
+.hd1 {
+  font-size: 1.3vw;
+  font-weight: 500;
 }
 
-/* Nav */
+.back1 {
+  font-size: 1.4vw;
+  display: inline-block;
+}
 
+.info {
+  width: 2vw;
+  height: auto;
+  display: inline-block;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.info:hover {
+  filter: brightness(0.55) sepia(2) hue-rotate(190deg) saturate(300%);
+  animation: moveLeftRight 0.4s ease-in-out infinite;
+}
+
+.back1:hover {
+  animation: moveLeftRight 0.4s ease-in-out infinite;
+}
+
+.s-q {
+  font-weight: 600;
+  margin-left: 3px;
+}
+
+nav a {
+  font-weight: 400;
+  font-size: 1.6vw;
+  text-decoration: none;
+  color: black;
+}
+
+/* ===========================
+애니메이션
+=========================== */
 @keyframes pulse {
   0%,
   100% {
@@ -255,7 +322,6 @@ section.intro {
   display: inline-block;
 }
 
-.back:hover,
 .s-q:hover {
   display: inline-block;
   font-size: 1.6vw;
@@ -282,93 +348,6 @@ section.intro {
   50% {
     transform: translateX(2px);
   }
-}
-
-nav {
-  position: fixed;
-  display: flex;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 68px;
-  padding-top: 10px;
-  z-index: 10;
-  padding-inline: 21px;
-  background-color: rgba(255, 255, 255);
-  backdrop-filter: blur(8px);
-  mask-image: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 70%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 80%,
-    transparent 100%
-  );
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.nav-right {
-  margin-left: auto;
-}
-
-.hd1 {
-  font-size: 1.3vw;
-  font-weight: 500;
-}
-
-.back1 {
-  font-size: 1.4vw;
-  display: inline-block;
-}
-
-.info {
-  width: 2vw; /* nav 텍스트 폰트 크기와 비슷한 느낌 */
-  height: auto;
-  display: inline-block;
-  filter: grayscale(100%);
-  cursor: pointer;
-}
-
-.info:hover {
-  filter: brightness(0.55) sepia(2) hue-rotate(190deg) saturate(300%);
-  animation: moveLeftRight 0.4s ease-in-out infinite;
-}
-.back1:hover {
-  animation: moveLeftRight 0.4s ease-in-out infinite;
-}
-
-.s-q {
-  font-weight: 600;
-  margin-left: 3px;
-}
-
-nav a {
-  font-weight: 400;
-  font-size: 1.6vw;
-  text-decoration: none;
-  color: black;
-}
-
-.index:hover,
-.rist:hover,
-.obs:hover,
-.sample:hover,
-.back1:hover,
-.back:hover,
-.s-q:hover,
-.hd1:hover,
-.mal:hover {
-  color: blue;
 }
 
 @keyframes wave {
@@ -418,37 +397,12 @@ nav a {
   }
 }
 
-/* =========== */
-/* Responsive */
-/* =========== */
-@media screen and (max-width: 900px) {
-  /* homestyle */
-  .welcome {
-    word-break: break-all;
-  }
-
-  /* navstyle */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4vw;
-    padding-top: 4vw;
-    z-index: 99;
-  }
-
-  nav a {
-    font-size: 4vw;
-  }
-
-  section a {
-    font-size: 17vw;
-  }
-
-  .list,
-  .info {
-    position: absolute;
-    right: 4vw;
-  }
+/* ===========================
+기타
+=========================== */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
