@@ -29,6 +29,7 @@
     height: 20px;
     transform: translate(-2px, 2px); /* 살짝 조정 */
     -webkit-tap-highlight-color: transparent; /* 터치했을 때 핑크 없애기 */
+    user-select: none;
   }
 
   .mal {
