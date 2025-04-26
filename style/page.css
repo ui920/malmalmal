@@ -49,28 +49,62 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  #iframes {
-    height: 100vh;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory; /* 계속 가로 스냅 유지 */
+  /* 1. nav 전체를 가로 flex로 유지하고 양끝 정렬 */
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8em 1em;
+    height: auto; /* 높이 자동 */
   }
 
-  #iframes-inner {
-    flex-direction: row; /* flex-row 유지 */
-    height: 100%;
+  /* 2. 왼쪽·오른쪽 컨테이너 자동 크기 */
+  .nav-left,
+  .nav-right {
+    width: auto;
   }
 
-  .iframe-body1,
-  .iframe-body2,
-  .iframe-body3 {
-    flex: 0 0 100vw; /* 모바일에서는 각 프레임이 100% 가로폭 */
-    height: 100vh;
-    scroll-snap-align: start;
+  /* 3. nav-left 내부 링크들 간격 조정 (필요시) */
+  .nav-left a {
+    margin-right: 0.2em; /* 기존 값보다 간격을 줄임 */
+    font-size: 4vw; /* 모바일용 링크 폰트 */
   }
 
-  iframe {
-    width: 100vw;
-    height: 100vh;
+  /* 4. 오른쪽 아이콘 크기 및 위치 조정 */
+  .info {
+    width: 18px; /* 책 아이콘 가로 */
+    height: auto;
+    margin-left: 0; /* 좌우 마진 초기화 */
+    transform: translateY(1px);
+    align-items: center;
   }
+
+  /* 5. nav-right 컨테이너 여백 */
+  .nav-right {
+    margin-right: 0.5em;
+  }
+
+  /* 6. (선택) 전체 nav 폰트 크기 다운 */
+  nav a {
+    font-size: 4vw;
+  }
+}
+
+.inner-iframe {
+  flex-direction: column;
+}
+
+.inner-iframe-left {
+  display: none;
+}
+
+.inner-iframe-right {
+  width: 100vw;
+  height: auto;
+}
+
+.iframe {
+  height: 100vh;
+  scroll-snap-align: start;
 }
