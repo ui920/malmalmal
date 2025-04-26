@@ -275,6 +275,7 @@ nav {
   width: 90px; /* or 원하는 크기 */
   height: 30px;
   transform: translate(-6px, 2px); /* 왼쪽으로 10px, 아래로 2px 이동 */
+  -webkit-tap-highlight-color: transparent; /* 터치했을 때 핑크 없애기 */
 }
 
 .info {
