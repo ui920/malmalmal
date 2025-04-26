@@ -20,9 +20,14 @@
   }
 
   .hd1,
-  .wavy-text,
-  .back1 {
+  .wavy-text {
     font-size: 3.2vw;
+  }
+
+  .back1 img {
+    width: 40px; /* 모바일용 더 작은 크기 */
+    height: 20px;
+    transform: translate(-2px, 2px); /* 살짝 조정 */
   }
 
   .mal {
