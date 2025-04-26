@@ -48,23 +48,29 @@ iframe {
   filter: grayscale(100%);
 }
 
-/* 모바일 대응 */
 @media (max-width: 768px) {
-  .inner-iframe {
-    flex-direction: column;
+  #iframes {
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory; /* 계속 가로 스냅 유지 */
   }
 
-  .inner-iframe-left {
-    display: none;
+  #iframes-inner {
+    flex-direction: row; /* flex-row 유지 */
+    height: 100%;
   }
 
-  .inner-iframe-right {
-    width: 100vw;
-    height: auto;
-  }
-
-  .iframe {
+  .iframe-body1,
+  .iframe-body2,
+  .iframe-body3 {
+    flex: 0 0 100vw; /* 모바일에서는 각 프레임이 100% 가로폭 */
     height: 100vh;
     scroll-snap-align: start;
+  }
+
+  iframe {
+    width: 100vw;
+    height: 100vh;
   }
 }
