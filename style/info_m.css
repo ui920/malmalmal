@@ -99,4 +99,7 @@
   .water-flow {
     font-size: 3.2vw !important;
   }
+  .apple-music-embed iframe {
+    height: 65px;
+  }
 }
