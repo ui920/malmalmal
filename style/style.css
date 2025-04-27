@@ -264,18 +264,31 @@ nav {
 
 .hd1 {
   font-size: 1.3vw;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .back1 {
-  display: inline-block; /* a 태그 자체는 클릭 가능하게 */
-}
-
-.back1 img {
-  width: 90px; /* or 원하는 크기 */
-  height: 30px;
-  transform: translate(3px, 2px);
-  -webkit-tap-highlight-color: transparent; /* 터치했을 때 핑크 없애기 */
+  font-weight: 450;
+  font-size: 1.3vw;
+  display: inline-block;
 }
 
 .info {
@@ -373,6 +386,7 @@ nav a {
 }
 
 .wavy-text {
+  font-weight: 500;
   font-size: 1.4vw;
   display: inline-block;
   animation: wave 1.2s infinite ease-in-out;

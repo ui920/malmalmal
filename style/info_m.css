@@ -24,11 +24,9 @@
     font-size: 2.8vw;
   }
 
-  .back1 img {
-    width: 40px; /* 모바일용 더 작은 크기 */
-    height: 20px;
-    transform: translate(-2px, 2px); /* 살짝 조정 */
-    animation: none; /* 호버시 애니메이션 끄기 */
+  .back1 {
+    font-size: 2.6vw;
+    animation: none;
   }
 
   .mal {
@@ -99,6 +97,6 @@
   }
 
   .water-flow {
-    font-size: 3vw !important; /* 물방울 텍스트 */
+    font-size: 3.2vw !important;
   }
 }
