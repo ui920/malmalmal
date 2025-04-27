@@ -28,8 +28,6 @@
     width: 40px; /* 모바일용 더 작은 크기 */
     height: 20px;
     transform: translate(-2px, 2px); /* 살짝 조정 */
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
   }
 
   .mal {

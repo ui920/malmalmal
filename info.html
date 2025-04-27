@@ -269,14 +269,15 @@
     </script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        const arrowImg = document.querySelector('.back1');
+        const backLink = document.querySelector('.back1');
+        const arrowImg = backLink.querySelector('img'); // a 태그 안 img 선택
 
-        arrowImg.addEventListener('mouseover', function () {
-          this.src = 'image/Barrow.svg'; // 파란색 화살표
+        backLink.addEventListener('mouseover', function () {
+          arrowImg.src = 'image/Barrow.svg'; // 이미지 src 변경
         });
 
-        arrowImg.addEventListener('mouseout', function () {
-          this.src = 'image/arrow.svg'; // 검정색 화살표
+        backLink.addEventListener('mouseout', function () {
+          arrowImg.src = 'image/arrow.svg'; // 원래대로
         });
       });
     </script>

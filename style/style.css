@@ -274,7 +274,7 @@ nav {
 .back1 img {
   width: 90px; /* or 원하는 크기 */
   height: 30px;
-  transform: translate(-6px, 2px); /* 왼쪽으로 10px, 아래로 2px 이동 */
+  transform: translate(3px, 2px);
   -webkit-tap-highlight-color: transparent; /* 터치했을 때 핑크 없애기 */
 }
 
@@ -293,8 +293,6 @@ nav {
 
 .back1:hover {
   animation: moveLeftRight 0.4s ease-in-out infinite;
-  /* filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(10000%) */
-  /* hue-rotate(240deg); */
 }
 
 .s-q {

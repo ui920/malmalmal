@@ -67,7 +67,7 @@ iframe {
 
   /* 3. nav-left 내부 링크들 간격 조정 (필요시) */
   .nav-left a {
-    margin-right: 0.2em; /* 기존 값보다 간격을 줄임 */
+    margin-right: 0; /* 완전 밀착 */
     font-size: 4vw; /* 모바일용 링크 폰트 */
   }
 
