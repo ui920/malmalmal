@@ -131,10 +131,18 @@ nav {
   }
 
   .nav-right .back {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 
   .nav-container {
     padding: 0.8em;
+  }
+
+  .back:hover {
+    animation: none; /* 모바일에서는 hover해도 회전 안 함 */
+  }
+
+  .back:active {
+    color: blue; /* 클릭(터치)했을 때 파란색 */
   }
 }

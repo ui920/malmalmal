@@ -49,7 +49,7 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  /* 1. nav 전체를 가로 flex로 유지하고 양끝 정렬 */
+  /*nav 전체를 가로 flex로 유지하고 양끝 정렬 */
   nav {
     display: flex;
     flex-direction: row;
@@ -57,38 +57,58 @@ iframe {
     justify-content: space-between;
     padding: 0.8em 1em;
     height: auto; /* 높이 자동 */
+    animation: none; /* 호버 애니메이션 끄기 */
+    transform: none; /* 이동, 회전 다 없애기 */
   }
 
-  /* 2. 왼쪽·오른쪽 컨테이너 자동 크기 */
+  nav a {
+    animation: none !important; /* 중요 */
+    transform: none !important; /* 중요 */
+  }
+
+  /* 왼쪽·오른쪽 컨테이너 자동 크기 */
   .nav-left,
   .nav-right {
     width: auto;
   }
 
-  /* 3. nav-left 내부 링크들 간격 조정 (필요시) */
+  /* 내부 링크들 간격 조정 (필요시) */
   .nav-left a {
     margin-right: 0; /* 완전 밀착 */
     font-size: 4vw; /* 모바일용 링크 폰트 */
   }
 
-  /* 4. 오른쪽 아이콘 크기 및 위치 조정 */
+  /*오른쪽 아이콘 크기 및 위치 조정 */
   .info {
     width: 18px; /* 책 아이콘 가로 */
     height: auto;
     margin-left: 0; /* 좌우 마진 초기화 */
-    transform: translateY(1px);
+    transform: translateY(2px);
     align-items: center;
+    animation: none !important;
   }
 
-  /* 5. nav-right 컨테이너 여백 */
+  .s-q:hover {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  /*nav-right 컨테이너 여백 */
   .nav-right {
     margin-right: 0.5em;
   }
 
-  /* 6. (선택) 전체 nav 폰트 크기 다운 */
-  nav a {
-    font-size: 4vw;
+  /*(선택) 전체 nav 폰트 크기 다운 */
+
+  nav a:hover {
+    animation: none; /* 호버 애니메이션 끄기 */
+    transform: none; /* 이동, 회전 다 없애기 */
   }
+}
+nav a {
+  animation: none !important;
+  transform: none !important;
+  color: inherit;
 }
 
 .inner-iframe {
