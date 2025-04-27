@@ -50,4 +50,17 @@ a {
   .main-text {
     line-height: 1.4;
   }
+  .welcome {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .welcome:hover {
+    transform: none !important;
+  }
+
+  /* 클릭(터치)할 때 색만 바꿔줄 수 있음 */
+  .welcome:active {
+    color: blue;
+  }
 }
