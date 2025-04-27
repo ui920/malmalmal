@@ -293,8 +293,8 @@ nav {
 
 .back1:hover {
   animation: moveLeftRight 0.4s ease-in-out infinite;
-  filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(10000%)
-    hue-rotate(240deg);
+  /* filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(10000%) */
+  /* hue-rotate(240deg); */
 }
 
 .s-q {

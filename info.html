@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/info_m.css" />
-    <script src="js/info.js"></script>
     <script src="js/s.js"></script>
 
     <link
@@ -266,6 +265,19 @@
           );
           flows.forEach((el) => (el.style.animationPlayState = 'running'));
         }, 2000);
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const arrowImg = document.querySelector('.back1');
+
+        arrowImg.addEventListener('mouseover', function () {
+          this.src = 'image/Barrow.svg'; // 파란색 화살표
+        });
+
+        arrowImg.addEventListener('mouseout', function () {
+          this.src = 'image/arrow.svg'; // 검정색 화살표
+        });
       });
     </script>
   </body>
