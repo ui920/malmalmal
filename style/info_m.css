@@ -100,6 +100,18 @@
     font-size: 3.2vw !important;
   }
   .apple-music-embed iframe {
-    height: 65px;
+    width: 100%;
+    max-width: 600px;
+    height: 320px;
+    border: none;
+  }
+
+  .apple-music-embed iframe {
+    height: 260px;
+  }
+
+  .bb2 {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
