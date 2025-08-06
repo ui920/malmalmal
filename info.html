@@ -52,7 +52,8 @@
           </a>
         </h2>
         <div class="faucet-container" id="faucet">
-          <img class="faucet" src="image/water.png" alt="수돗꼭지" />
+        <audio id="D" src="mp3/끼이익.mp3"></audio>
+        <img class="faucet" src="image/water.png" alt="수돗꼭지" />
         </div>
       </article>
 
@@ -259,6 +260,7 @@
       }
 
       const faucet = document.querySelector('.faucet-container');
+      const faucetSound = document.getElementById('D');
 
       for (let i = 0; i < 5; i++) {
         const drop = document.createElement('div');
@@ -270,6 +272,9 @@
         faucet.appendChild(drop);
       }
       faucet.addEventListener('click', () => {
+        faucetSound.currentTime = 0;
+        faucetSound.play();
+
         alert(
           '끼이익 말을 2초동안 잠시 멈추겠습니다.\nScreeeech— we’ll pause the talk for 2 seconds.'
         );
