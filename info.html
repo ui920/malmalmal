@@ -53,7 +53,7 @@
         </h2>
         <div class="faucet-container" id="faucet">
         <img class="faucet" src="image/water.png" alt="수돗꼭지" />
-        <audio id="D" src="mp3/끼이익.mp3"></audio>
+        <audio id="D" src="mp3/kiki.mp3"></audio>
         </div>
       </article>
 
@@ -276,7 +276,7 @@
   faucetSound.play();
 
   alert(
-    '끼이익 말을 2초동안 잠시 멈추겠습니다.\nScreeeech— we’ll pause the talk for 2 seconds.'
+    '끼이익 말을 3초동안 잠시 멈추겠습니다.\nScreeeech— we’ll pause the talk for 3 seconds.'
   );
 
   const flows = document.querySelectorAll('.water-flow');
@@ -292,7 +292,7 @@
     );
 
     flows.forEach((el) => (el.style.animationPlayState = 'running'));
-  }, 2000);
+  }, 3000);
 });
     </script>
   </body>
